@@ -21,7 +21,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && npm install -g npm@latest
     
 # 4. Install Claude Code, Codex CLI, and Gemini CLI
-RUN curl -fsSL https://claude.ai/install.sh | bash
+#RUN curl -fsSL https://claude.ai/install.sh | bash
 
 # Install using npm
 RUN  npm install -g @openai/codex
