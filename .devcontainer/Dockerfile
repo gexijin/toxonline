@@ -12,7 +12,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libsqlite3-dev \
   && rm -rf /var/lib/apt/lists/*
 
-
 # 2. R packages for VS Code integration + app runtime deps
 RUN R -q -e 'install.packages(c(\
   "rstudioapi","languageserver",\
