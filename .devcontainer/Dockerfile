@@ -13,10 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 # 2. R packages for VS Code integration + app runtime deps
-RUN R -q -e 'install.packages(c(\
-  "rstudioapi","languageserver",\
-  "shiny","ggplot2","ggiraph","bslib","dplyr","stringr"\
-  ), repos="https://cloud.r-project.org")'
+RUN R -q -e 'install.packages(c("rstudioapi","languageserver"), repos="https://cloud.r-project.org")'
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
